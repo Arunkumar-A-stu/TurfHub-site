@@ -83,7 +83,7 @@ header {
 }
 
 .hero {
-    background: url('./Images/background1.jpg') no-repeat center center/cover;
+    background: url('../Images/background1.jpg') no-repeat center center/cover;
     height: 400px;
     display: flex;
     justify-content: center;
