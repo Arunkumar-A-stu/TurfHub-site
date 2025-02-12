@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurfHub</title>
+    <link rel="icon" href="./Images/headIcon.png">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <div class="background-content">
+    <header>
+        <img id="headIcon" src="./Images/headIcon.png">
+        <h2 class="logo">TurfHub</h2>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#tournament">Tournaments</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <button class="btn-login">Login</button>
+        </nav>
+    </header>  
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Book Your Turf Now!</h1>
+          <p>Play Anytime, Anywhere.</p>
+          <button class="btn-book">Find Turf Near You</button>
+        </div>
+    </section>
+      <!-- Features Section -->
+    <section class="features">
+      <div class="feature-card">
+        <h3>Easy Booking</h3>
+        <p>Book turfs in just a few clicks.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Join Tournaments</h3>
+        <p>Compete and win exciting prizes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>24/7 Support</h3>
+        <p>We’re here to help you anytime.</p>
+      </div>
+    </section>
+
+  <!-- Tournament Section -->
+  <section id="tournament" class="tournament">
+    <h2>Tournaments</h2>
+    <div class="tournament-container">
+      <div class="host-tournament">
+        <h3>Host a Tournament</h3>
+        <form>
+          <input type="text" placeholder="Tournament Name" required>
+          <input type="datetime-local" required>
+          <input type="text" placeholder="Turf Location" required>
+          <input type="number" placeholder="Entry Fee" required>
+          <input type="number" placeholder="Max Players" required>
+          <button type="submit">Create Tournament</button>
+        </form>
+      </div>
+      <div class="ongoing-matches">
+        <h3>Ongoing Matches</h3>
+        <ul>
+          <li>Match 1 - Location A</li>
+          <li>Match 2 - Location B</li>
+          <li>Match 3 - Location C</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+     <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Turf Booking is your one-stop solution for booking turfs and joining exciting tournaments. Our mission is to bring sports enthusiasts together and make turf booking hassle-free.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Mobile Number" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-details">
+        <p>Email: support@turfbooking.com</p>
+        <p>Phone: +91-XXXXX-XXXXX</p>
+        <p>Address: [Your Office Address]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#tournament">Tournament</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+    <p>© 2023 Turf Booking. All rights reserved.</p>
+  </footer>
+</div>
+
+<div class="overlay"></div>
+
+<center>
+  <div class="wrapper">
+    <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+      <div class="form-box login">
+        <h2>Login</h2>
+          <form >
+            <div class="input-box">
+              <span class="icon"><ion-icon name="call"></ion-icon></span>
+              <input type="tel" required>
+              <label>Phone Number</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forget">
+              <label><input type="checkbox">Remember Me</label>
+              <a href="#">Forget Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+              <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+            </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Usename</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
+                    <input type="tel" required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox">
+                    I agree to the terms & conditions</label>
+                </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+            </form>
+        </div>
+    </div>
+</center>
+
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
