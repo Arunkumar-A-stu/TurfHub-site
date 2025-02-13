@@ -29,51 +29,71 @@
         </div>
     </section>
       <!-- Features Section -->
-    <section class="features">
-      <div class="feature-card">
-        <h3>Easy Booking</h3>
-        <p>Book turfs in just a few clicks.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Join Tournaments</h3>
-        <p>Compete and win exciting prizes.</p>
-      </div>
-      <div class="feature-card">
-        <h3>24/7 Support</h3>
-        <p>We’re here to help you anytime.</p>
-      </div>
+      <section class="features">
+        <h2 class="section-title">Why Choose TurfHub?</h2>
+        <p class="section-description">Experience the best facilities with hassle-free booking and exciting tournaments.</p>
+        
+        <div class="features-container">
+            <div class="feature-card">
+                <img src="./Images/feature.jpg" alt="Easy Booking">
+                <h3>Easy Booking</h3>
+                <p>Book your favorite turf with just a few clicks.</p>
+            </div>
+            
+            <div class="feature-card">
+                <img src="images/feature2.png" alt="Top Facilities">
+                <h3>Top Facilities</h3>
+                <p>Play on high-quality turfs with top-notch amenities.</p>
+            </div>
+            
+            <div class="feature-card">
+                <img src="images/feature3.png" alt="Exciting Tournaments">
+                <h3>Exciting Tournaments</h3>
+                <p>Compete in thrilling tournaments and win prizes.</p>
+            </div>
+        </div>
     </section>
+    
 
   <!-- Tournament Section -->
   <section id="tournament" class="tournament">
-    <h2>Tournaments</h2>
-    <div class="tournament-container">
-      <div class="host-tournament">
-        <h3>Host a Tournament</h3>
-        <form>
-          <input type="text" placeholder="Tournament Name" required>
-          <input type="datetime-local" required>
-          <input type="text" placeholder="Turf Location" required>
-          <input type="number" placeholder="Entry Fee" required>
-          <input type="number" placeholder="Max Players" required>
-          <button type="submit">Create Tournament</button>
-        </form>
-      </div>
-      <div class="ongoing-matches">
-        <h3>Ongoing Matches</h3>
-        <ul>
-          <li>Match 1 - Location A</li>
-          <li>Match 2 - Location B</li>
-          <li>Match 3 - Location C</li>
-        </ul>
-      </div>
-    </div>
+    <div class="overlay"></div>
+    <div class="tournament-content">
+      <h1>Join Exciting Tournaments</h1>
+      <p>Compete in thrilling matches and prove your skills on the field. Register now to participate in upcoming tournaments and showcase your talent!</p>
+      <button class="btn-tournament" onclick="window.location.href='tournament.html'">View Tournaments</button>
+  </div>
   </section>
 
      <!-- About Section -->
   <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>Turf Booking is your one-stop solution for booking turfs and joining exciting tournaments. Our mission is to bring sports enthusiasts together and make turf booking hassle-free.</p>
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>Welcome to <strong>TurfHub</strong>, the ultimate destination for sports enthusiasts! Our platform is dedicated to bringing players together through <strong>exciting tournaments, engaging matches, and easy turf booking</strong>. Whether you're a casual player or a competitive athlete, we provide the perfect environment to enjoy the game.</p>
+
+      <div class="about-content">
+          <div class="about-card">
+              <h3>Our Mission</h3>
+              <p>We aim to:</p>
+              <ul>
+                  <li>✔ Create a seamless and hassle-free turf booking experience.</li>
+                  <li>✔ Host <strong>competitive and fun</strong> tournaments.</li>
+                  <li>✔ Build a <strong>strong and inclusive</strong> sports community.</li>
+                  <li>✔ Provide 24/7 support for all players.</li>
+              </ul>
+          </div>
+
+          <div class="about-card">
+              <h3>Why Choose Us?</h3>
+              <ul>
+                  <li>⚡ <strong>Easy Turf Booking</strong> – Find and book a turf in seconds.</li>
+                  <li>🔥 <strong>Live Match Updates</strong> – Stay updated with ongoing tournaments.</li>
+                  <li>🤝 <strong>Community & Support</strong> – Connect with other players anytime.</li>
+                  <li>🏆 <strong>Exciting Rewards</strong> – Win prizes in thrilling tournaments!</li>
+              </ul>
+          </div>
+      </div>
+  </div>
   </section>
 
   <!-- Contact Section -->
@@ -104,15 +124,15 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
+      <a href="#"><img src="./Images/logos/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="./Images/logos/instagram.svg" alt="Instagram"></a>
       <a href="#">Twitter</a>
     </div>
     <p>© 2023 Turf Booking. All rights reserved.</p>
   </footer>
 </div>
 
-<div class="overlay"></div>
+
 
 <center>
   <div class="wrapper">

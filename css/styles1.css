@@ -9,16 +9,21 @@
 
 header {
     position: fixed;
-    top:0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width:100%;
-    padding: 15px;
-    background: #4CAF50;
+    padding: 15px 30px;
     color: white;
     display:flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    transition: background 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background: rgba(34, 139, 34, 1); /* Solid green when scrolled */
+
 }
 
 #headIcon {
@@ -28,10 +33,21 @@ header {
 }
 
 .logo {
-    font-size: 2em;
+    font-size: 1.8em;
+    font-weight: bold;
     color: white;
     user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between icon & text */
 }
+
+.logo img {
+    width: 40px; /* Adjust logo size */
+    height: auto;
+    border-radius: 10px; /* Slightly rounded edges for soft look */
+}
+
 
 .navbar a {
     position: relative;
@@ -63,7 +79,7 @@ header {
 
 .navbar .btn-login {
     width: 110px;
-    height: 40px;
+    height: 35px;
     background:transparent;
     border: 2px solid #fff;
     outline: none;
@@ -72,25 +88,111 @@ header {
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: 10px;
-    transition: 0.5s; 
+    transition: 0.3s; 
 }
 
 .navbar .btn-login:hover {
-    background:greenyellow;
+    background:#c0ff75;
     color: black;
 }
 
+
+
 .hero {
     background: url('../Images/background1.jpg') no-repeat center center/cover;
-    height: 400px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+    position: relative;
   }
+
+.features,
+.tournament,
+.about,
+.contact {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    height: 100vh; /* Full-screen section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1em;
+    color: #ddd;
+}
+
+.contact-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
   
   .hero-content h1 {
     font-size: 48px;
@@ -115,12 +217,7 @@ header {
     background:#FF8C00;
     color: black;
   }
-  .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
-    background: #f9f9f9;
-  }
+ 
   
   .feature-card {
     text-align: center;
@@ -131,23 +228,60 @@ header {
   }
   
   .tournament {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .tournament-container {
+    width: 100%;
+    height: 100vh;
+    background: url('../Images/wallpaperflare.com_wallpaper\ \(3\).jpg') no-repeat center center/cover;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .host-tournament, .ongoing-matches {
-    width: 45%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    opacity: 0.9;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Subtle dark overlay */
+}
+  
+ 
+.tournament-content {
+    max-width: 800px;
+}
+
+.tournament h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+
+.tournament p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    pointer-events: none;
+}
+
+.btn-tournament {
+    padding: 12px 25px;
+    background: #FF5722;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.btn-tournament:hover {
+    background: #FF8C00;
+    color: black;
+}
 
 .overlay {
     position: fixed;
@@ -190,7 +324,8 @@ header {
 }
 
 .wrapper.active-popup {
-    transform: scaleX(1);
+    opacity: 1;
+    transform: scale(1);
     
 }
 
@@ -330,7 +465,13 @@ header {
     font-size: medium;
     cursor: pointer;
     font-weight: 500;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
 }
+
+.btn:hover {
+    background: #32CD32;
+    transform: scale(1.05);
+  }
 
 .login-register {
     font-size: .9em;
@@ -351,9 +492,64 @@ header {
 }
 
 .about {
-    padding: 40px 20px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #4CAF50, #2E7D32);
+    color: white;
     text-align: center;
-    background: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.about-container {
+    max-width: 1000px;
+}
+
+.about h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+.about-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-card ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.about-card ul li strong {
+    color: #FFD700;
 }
   
 .contact {
@@ -402,4 +598,29 @@ footer .footer-links a, footer .social-media a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+
+}
+
+@media (max-width: 768px) {
+    section {
+        height: auto;
+        padding: 60px 20px; /* Adjust padding */
+    }
+
+    .tournament-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .host-tournament, .ongoing-matches {
+        width: 90%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
 }
