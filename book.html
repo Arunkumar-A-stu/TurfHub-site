@@ -3,56 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurfHub - Book Your Slot</title>
     <link rel="stylesheet" href="./css/bookstyle.css">
-    <title>TurfHub</title>
 </head>
 <body>
+
     <header>
         <h1>Turf Booking</h1>
     </header>
     
     <div class="container">
-        <h2>Select Location, Date, and Time Slot</h2>
-        <form id="bookingForm">
-            <div class="form-group">
-                <label for="location">Select Location:</label>
-                <select id="location" name="location" required>
-                    <option value="">--Select Location--</option>
-                    <option value="Chennai">Location 1</option>
-                    <option value="Virudhunagar">Location 2</option>
-                    <option value="Madurai">Location 3</option>
-                    <option value="Sivakasi">Location 4</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="search">Search Turf:</label>
-                <input type="text" id="search" name="search" placeholder="Enter turf name..." required>
-            </div>
-            <div class="form-group">
-                <label for="date">Select Date:</label>
-                <input type="date" id="date" name="date" required>
-            </div>
-            <div class="form-group">
-                <label>Select Time Slot:</label>
-                <div class="time-slots" id="timeSlotsContainer">
-                    <div class="time-slot" data-value="1 AM">1 AM</div>
-                    <div class="time-slot" data-value="2 AM">2 AM</div>
-                    <div class="time-slot" data-value="3 AM">3 AM</div>
-                    <div class="time-slot" data-value="4 AM">4 AM</div>
-                    <div class="time-slot" data-value="5 AM">5 AM</div>
-                    <div class="time-slot" data-value="6 AM">6 AM</div>
-                    <div class="time-slot" data-value="7 AM">7 AM</div>
-                    <div class="time-slot" data-value="8 AM">8 AM</div>
-                    <div class="time-slot" data-value="9 AM">9 AM</div>
-                    <div class="time-slot" data-value="10 AM">10 AM</div>
-                    <div class="time-slot" data-value="11 AM">11 AM</div>
-                    <div class="time-slot" data-value="12 PM">12 PM</div>
-                </div>
-            </div>
-            <input id="bookSlotButton" type="button" value="Book Now" disabled="true">
-        </form>
+        <h2>Select Date and Time Slot</h2>
+
+        <!-- Date Selection -->
+        <div class="date-container" id="dateContainer"></div>
+
+        <!-- Time Slot Selection -->
+        <h3>Select a Time Slot:</h3>
+        <div class="time-slots">
+            <div class="time-slot" data-value="1:00 AM">1:00 AM</div>
+            <div class="time-slot" data-value="2:00 AM">2:00 AM</div>
+            <div class="time-slot" data-value="3:00 AM">3:00 PM</div>
+            <div class="time-slot" data-value="4:00 AM">4:00 PM</div>
+            <div class="time-slot" data-value="5:00 AM">5:00 PM</div>
+            <div class="time-slot" data-value="6:00 AM">6:00 PM</div>
+            <div class="time-slot" data-value="7:00 AM">7:00 PM</div>
+            <div class="time-slot" data-value="8:00 AM">8:00 PM</div>
+            <div class="time-slot" data-value="9:00 AM">9:00 PM</div>
+            <div class="time-slot" data-value="10:00 AM">10:00 PM</div>
+            <div class="time-slot" data-value="11:00 AM">11:00 PM</div>
+            <div class="time-slot" data-value="12:00 PM">12:00 PM</div>
+            <div class="time-slot" data-value="1:00 PM">1:00 PM</div>
+            <div class="time-slot" data-value="2:00 PM">2:00 PM</div>
+            <div class="time-slot" data-value="3:00 PM">3:00 PM</div>
+            <div class="time-slot" data-value="4:00 PM">4:00 PM</div>
+            <div class="time-slot" data-value="5:00 PM">5:00 PM</div>
+            <div class="time-slot" data-value="6:00 PM">6:00 PM</div>
+            <div class="time-slot" data-value="7:00 PM">7:00 PM</div>
+            <div class="time-slot" data-value="8:00 PM">8:00 PM</div>
+            <div class="time-slot" data-value="9:00 PM">9:00 PM</div>
+            <div class="time-slot" data-value="10:00 PM">10:00 PM</div>
+            <div class="time-slot" data-value="11:00 PM">11:00 PM</div>
+            <div class="time-slot" data-value="12:00 AM">12:00 PM</div>
+        </div>
+
+        <!-- Book Now Button -->
+        <button id="bookSlotButton" disabled>Book Now</button>
     </div>
-    
+
     <script src="./script/bookscript.js"></script>
+
 </body>
 </html>

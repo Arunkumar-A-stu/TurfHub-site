@@ -1,75 +1,117 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #EAEAEA;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
     text-align: center;
 }
-h1 {
-    margin: 0;
-}
-.container {
-    max-width: 800px;
-    margin: 50px auto;
+
+/* Header Styling */
+header {
+    background: #2ECC71;
+    color: white;
     padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.form-group {
-    margin-bottom: 15px;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.time-slots{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
+/* Container */
+.container {
+    background: #1E1E1E;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-.time-slot {
-    display: inline-block;
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #ccc;
+
+/* Date Selection */
+.date-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.date-box {
+    background: #2C2C2C;
+    padding: 10px 15px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s ease;
+    font-size: 14px;
+    text-align: center;
+    min-width: 80px;
+    font-weight: bold;
+}
+
+.date-box.active {
+    background: #2ECC71;
+    color: #121212;
+}
+
+.date-box:hover {
+    background: #2ECC71;
+    transform: scale(1.1);
+}
+
+/* Time Slots */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.time-slot {
+    padding: 12px;
+    background: #2C2C2C;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+    color: white;
 }
 
 .time-slot:hover {
-    background-color: #f0f0f0;
+    background: #2ECC71;
+    color: #121212;
+    transform: scale(1.05);
 }
 
+/* Selected Time Slot */
 .time-slot.selected {
-    background-color: #007bff; /* Change this color to your preference */
+    background: #FF5733;
     color: white;
 }
-select, input[type="text"], input[type="date"], input[type="submit"] {
-    width: 99%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+
+/* Booking Button */
 #bookSlotButton {
-    background-color: #4CAF50;
+    background: #FF5733;
     color: white;
     border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 18px;
     cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: 0.3s ease;
+    width: 100%;
 }
-#bookSlotButton:hover {
-    background-color: #45a049;
+
+#bookSlotButton:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+#bookSlotButton:hover:not(:disabled) {
+    background: #E64A19;
+    transform: scale(1.05);
 }
