@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
+@font-face {
+    font-family: 'nura';
+    src:url('../Fonts/Nura\ OTF/Nura-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,7 +38,8 @@ header.scrolled {
 
 .logo {
     font-size: 1.8em;
-    font-weight: bold;
+    font-family: 'nura', sans-serif;
+    letter-spacing: 2px;
     color: white;
     user-select: none;
     display: flex;
@@ -72,6 +77,9 @@ header.scrolled {
     transition: transform .3s ease-in-out;
 }
 
+.navbar a:hover{
+    color: #c0ff75;
+}
 .navbar a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
@@ -97,6 +105,18 @@ header.scrolled {
     background:#c0ff75;
     color: black;
 }
+
+.menuham img{
+    
+    color: white;
+    font-size: 30px;
+}
+
+.menuham{
+    display: none;
+}
+
+
 
 
 
@@ -129,9 +149,15 @@ header.scrolled {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color:black;
     padding: 50px 20px;
+}
+
+.feature-card img {
+    width:100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .section-title {
@@ -171,11 +197,7 @@ header.scrolled {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.feature-card img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 15px;
-}
+
 
 .feature-card h3 {
     font-size: 1.5em;
@@ -184,7 +206,7 @@ header.scrolled {
 
 .feature-card p {
     font-size: 1em;
-    color: #ddd;
+    color: black;
 }
 
 .contact-container {
@@ -245,6 +267,7 @@ header.scrolled {
     align-items: center;
     text-align: center;
     color: white;
+    text-shadow: #333 1px 0 10px;
     padding: 20px;
     opacity: 0.9;
 }
@@ -275,6 +298,12 @@ header.scrolled {
     pointer-events: none;
 }
 
+.btncls{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
 .btn-tournament {
     padding: 12px 25px;
     background: #FF5722;
@@ -292,6 +321,22 @@ header.scrolled {
     color: black;
 }
 
+.btn-tournament-register{
+    padding: 12px 25px;
+    background: #FF5722;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.btn-tournament-register:hover {
+    background: #FF8C00;
+    color: black;
+}
 .overlay {
     position: fixed;
     top: 0;
@@ -615,11 +660,29 @@ footer .social-media img {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     section {
+        width: 100%;
         height: auto;
         padding: 60px 20px; /* Adjust padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
+
+    .navbar {
+        position:absolute;
+        display: flex;
+        top:70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(34, 139, 34, 1); /* Solid green when scrolled */
+    }
+
 
     .tournament-container {
         flex-direction: column;

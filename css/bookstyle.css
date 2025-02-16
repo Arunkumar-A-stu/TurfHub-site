@@ -1,8 +1,11 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #121212;
-    color: #EAEAEA;
+    font-family: 'Inter', sans-serif;
+    background: #F9F9F9;
+    color: black;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -10,108 +13,175 @@ body {
 
 /* Header Styling */
 header {
-    background: #2ECC71;
+    background: #228B22;
     color: white;
-    padding: 20px;
-    font-size: 24px;
+    padding: 15px;
+    font-size: 22px;
     font-weight: bold;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.location-container{
+    background: white;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 400px;
+    border: 1px solid #ddd;
+}
+
+select {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #F7FFF7;
+    border: 2px solid #4CBB17;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    appearance: none;
+}
+
+select:focus {
+    border-color: #70C247;
+    box-shadow: 0 0 10px rgba(76, 187, 23, 0.5);
+}
+
+option {
+    padding: 10px;
+    font-size: 16px;
+    background: white;
+    color: black;
+}
+
+select {
+    transition: 0.3s ease-in-out;
+}
+
+select:hover {
+    transform: scale(1.02);
+}
+
+select:active {
+    transform: scale(0.98);
 }
 
 /* Container */
 .container {
-    background: #1E1E1E;
+    background: white;
     padding: 30px;
     margin: 50px auto;
-    border-radius: 15px;
-    max-width: 600px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 500px;
+    border: 1px solid #ddd;
 }
 
 /* Date Selection */
 .date-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    overflow-x: auto;
+    gap: 8px;
+    overflow-x: scroll;
     padding-bottom: 10px;
 }
 
+
 .date-box {
-    background: #2C2C2C;
-    padding: 10px 15px;
-    border-radius: 10px;
+    background: white;
+    padding: 10px 12px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s ease;
     font-size: 14px;
     text-align: center;
-    min-width: 80px;
+    min-width: 70px;
     font-weight: bold;
+    border: 2px solid #115D33;
+    color: #115D33;
 }
 
 .date-box.active {
-    background: #2ECC71;
-    color: #121212;
+    background: #228B22;
+    color: white;
 }
 
 .date-box:hover {
-    background: #2ECC71;
-    transform: scale(1.1);
+    background: #4CBB17;
+    color: white;
 }
 
 /* Time Slots */
 .time-slots {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .time-slot {
-    padding: 12px;
-    background: #2C2C2C;
-    border-radius: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
     cursor: pointer;
     text-align: center;
-    font-weight: bold;
     font-size: 14px;
-    transition: 0.3s ease;
+    border: 2px solid #115D33;
+    font-weight: bold;
+    color: #115D33;
+}
+
+.time-slot:hover{
+    background: #4CBB17;
     color: white;
 }
 
-.time-slot:hover {
-    background: #2ECC71;
-    color: #121212;
-    transform: scale(1.05);
-}
-
-/* Selected Time Slot */
 .time-slot.selected {
-    background: #FF5733;
+    background: #228B22;
     color: white;
 }
 
 /* Booking Button */
 #bookSlotButton {
-    background: #FF5733;
+    background: #115D33;
     color: white;
     border: none;
-    padding: 12px 20px;
-    font-size: 18px;
+    padding: 12px 18px;
+    font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
     margin-top: 20px;
-    transition: 0.3s ease;
+    transition: 0.3s;
     width: 100%;
 }
 
 #bookSlotButton:disabled {
-    background: gray;
+    background: #ccc;
     cursor: not-allowed;
+    color: black;
 }
 
 #bookSlotButton:hover:not(:disabled) {
-    background: #E64A19;
-    transform: scale(1.05);
+    background: #228B22;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+  
+footer .footer-links, footer .social-media {
+    margin-bottom: 10px;
+}
+  
+footer .footer-links a, footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+
 }

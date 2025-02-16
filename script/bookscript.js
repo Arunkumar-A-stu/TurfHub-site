@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const dateContainer = document.getElementById("dateContainer");
     const bookButton = document.getElementById("bookSlotButton");
     const timeSlots = document.querySelectorAll(".time-slot");
+    const selectedCity = document.getElementById("CitySelect");
+    const selectedTurf = document.getElementById("TurfSelect");
 
     let selectedDate = null;
     let selectedTime = null;
@@ -53,4 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
             bookButton.disabled = true;
         }
     }
+
+    bookButton.addEventListener("click", () => {
+        alert(`City: ${selectedCity.value}\nTurf: ${selectedTurf.value}\nSelected Date: ${selectedDate}\nSelected Time: ${selectedTime}`);
+        window.location.href = "book.html";
+    });
 });
