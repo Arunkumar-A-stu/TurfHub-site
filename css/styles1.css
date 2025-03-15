@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'nura';
+    src:url('../Fonts/Nura\ OTF/Nura-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    padding: 15px 30px;
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    transition: background 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background: rgba(34, 139, 34, 1); /* Solid green when scrolled */
+
+}
+
+#headIcon {
+    width: 50px;
+    height: 50px;
+    user-select: none;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-family: 'nura', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between icon & text */
+}
+
+.logo img {
+    width: 40px; /* Adjust logo size */
+    height: auto;
+    border-radius: 10px; /* Slightly rounded edges for soft look */
+}
+
+
+.navbar a {
+    position: relative;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: greenyellow ;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #c0ff75;
+}
+.navbar a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navbar .btn-login {
+    width: 110px;
+    height: 35px;
+    background:transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 10px;
+    transition: 0.3s; 
+}
+
+.navbar .btn-login:hover {
+    background:#c0ff75;
+    color: black;
+}
+
+.menuham img{
+    
+    color: white;
+    font-size: 30px;
+}
+
+.menuham{
+    display: none;
+}
+
+
+
+
+
+.hero {
+    background: url('../Images/background1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+
+.features,
+.tournament,
+.about,
+.contact {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    height: 100vh; /* Full-screen section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color:black;
+    padding: 50px 20px;
+}
+
+.feature-card img {
+    width:100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.feature-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1em;
+    color: black;
+}
+
+.contact-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-content{
+    max-width: 800px;
+}
+
+  
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+  
+  .hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    pointer-events: none;
+  }
+  
+  .hero-content button {
+    padding: 12px 25px;
+    background: #FF5722;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .hero .btn-book:hover {
+    background: #FF8C00;
+    color: black;
+  }
+ 
+  
+  .feature-card {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tournament {
+    width: 100%;
+    height: 100vh;
+    background: url('../Images/wallpaperflare.com_wallpaper\ \(3\).jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: #333 1px 0 10px;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Subtle dark overlay */
+}
+  
+ 
+.tournament-content {
+    max-width: 800px;
+}
+
+.tournament h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+
+.tournament p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    pointer-events: none;
+}
+
+.btncls{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+.btn-tournament {
+    padding: 12px 25px;
+    background: #FF5722;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.btn-tournament:hover {
+    background: #FF8C00;
+    color: black;
+}
+
+.btn-tournament-register{
+    padding: 12px 25px;
+    background: #FF5722;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.btn-tournament-register:hover {
+    background: #FF8C00;
+    color: black;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(5px); /* Optional: Adds blur to the overlay */
+    display: none; /* Hidden by default */
+    z-index: 999; /* Below the popup but above the background */
+}
+
+.background-content {
+    transition: filter 0.2ms ease; /* Smooth transition for blur effect */
+}
+
+.background-content.blur {
+    filter: blur(5px); /* Apply blur effect */
+    pointer-events: none;
+}
+
+.wrapper{
+    position: fixed;
+    left: 40%;
+    top: 33%;
+    width:400px;
+    height: 400px;
+    background: whitesmoke;
+    border: 2px solid rgba(2, 253, 2, 0.5);
+    border-radius:20px;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    transform:scale(0);
+    align-items: center;
+    overflow: hidden;
+    z-index: 1000;
+    transition: transform .5s ease,height .2s ease;
+}
+
+.wrapper.active-popup {
+    opacity: 1;
+    transform: scale(1);
+    
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+
+}
+
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translate(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 55px;
+    background: chartreuse;
+    font-size: 3em;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: green;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width:100%;
+    height:  50px;
+    border-bottom: 2px solid green;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top:50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: green;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0  35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: chartreuse;
+    line-height: 57px;
+}
+
+.remember-forget {
+    font-size:  .9em;
+    color: black;
+    font-weight: 300;
+    margin: -10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input {
+    accent-color: chartreuse;
+    margin-right: 3px;
+
+}
+
+.remember-forget a {
+    text-decoration: none;
+    color: chartreuse;
+
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: greenyellow;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #32CD32;
+    transform: scale(1.05);
+  }
+
+.login-register {
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: chartreuse;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #4CAF50, #2E7D32);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-container {
+    max-width: 1000px;
+}
+
+.about h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+.about-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-card ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.about-card ul li strong {
+    color: #FFD700;
+}
+  
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+  
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+  
+.contact-container form {
+    width: 45%;
+}
+  
+.contact-container form input, .contact-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.contact-container form button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+  
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+  
+footer .footer-links, footer .social-media {
+    margin-bottom: 10px;
+}
+  
+footer .footer-links a, footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+
+}
+
+@media (max-width: 600px) {
+    section {
+        width: 100%;
+        height: auto;
+        padding: 60px 20px; /* Adjust padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar {
+        position:absolute;
+        display: flex;
+        top:70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(34, 139, 34, 1); /* Solid green when scrolled */
+    }
+
+
+    .tournament-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .host-tournament, .ongoing-matches {
+        width: 90%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+}

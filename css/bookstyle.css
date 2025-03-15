@@ -1,0 +1,187 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #F9F9F9;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background: #228B22;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.location-container{
+    background: white;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 400px;
+    border: 1px solid #ddd;
+}
+
+select {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #F7FFF7;
+    border: 2px solid #4CBB17;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    appearance: none;
+}
+
+select:focus {
+    border-color: #70C247;
+    box-shadow: 0 0 10px rgba(76, 187, 23, 0.5);
+}
+
+option {
+    padding: 10px;
+    font-size: 16px;
+    background: white;
+    color: black;
+}
+
+select {
+    transition: 0.3s ease-in-out;
+}
+
+select:hover {
+    transform: scale(1.02);
+}
+
+select:active {
+    transform: scale(0.98);
+}
+
+/* Container */
+.container {
+    background: white;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 500px;
+    border: 1px solid #ddd;
+}
+
+/* Date Selection */
+.date-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+}
+
+
+.date-box {
+    background: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    min-width: 70px;
+    font-weight: bold;
+    border: 2px solid #115D33;
+    color: #115D33;
+}
+
+.date-box.active {
+    background: #228B22;
+    color: white;
+}
+
+.date-box:hover {
+    background: #4CBB17;
+    color: white;
+}
+
+/* Time Slots */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-slot {
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #115D33;
+    font-weight: bold;
+    color: #115D33;
+}
+
+.time-slot:hover{
+    background: #4CBB17;
+    color: white;
+}
+
+.time-slot.selected {
+    background: #228B22;
+    color: white;
+}
+
+/* Booking Button */
+#bookSlotButton {
+    background: #115D33;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+#bookSlotButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    color: black;
+}
+
+#bookSlotButton:hover:not(:disabled) {
+    background: #228B22;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+  
+footer .footer-links, footer .social-media {
+    margin-bottom: 10px;
+}
+  
+footer .footer-links a, footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+
+}
