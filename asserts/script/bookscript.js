@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Click event to select a date
             dateBox.addEventListener("click", () => {
-                document.querySelectorAll(".date-box").forEach(b => b.classList.remove("active"));
+               // document.querySelectorAll(".date-box").forEach(b => b.classList.remove("active"));
                 dateBox.classList.add("active");
                 selectedDate = dateBox.dataset.value;
                 checkEnableButton();

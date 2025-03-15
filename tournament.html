@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Page</title>
+    <link rel="stylesheet" href="../css/tournament.css">
+</head>
+<body>
+    <header>
+        <!--<img id="headIcon" src="../Images/headIcon.png">-->
+        <h2 class="logo">TurfHub</h2>
+        <nav class="navbar">
+            <a href="index1.html#home">Home</a>
+            <a href="index1.html#tournament">Tournaments</a>
+            <a href="index1.html#about">About</a>
+            <a href="index1.html#contact">Contact</a>
+        </nav>
+    </header> 
+    <!-- Preview Section (Full Screen) -->
+    <section id="preview">
+        <div class="preview-container">
+            <!-- Image Slider (60%) -->
+            <div class="slider-container">
+                <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+                <div class="slider">
+                    <img src="../Images/Tournament/Preview/1.jpeg" class="slide" alt="Highlight 1">
+                    <img src="../Images/Tournament/Preview/2.jpeg" class="slide" alt="Highlight 2">
+                    <img src="../Images/Tournament/Preview/3.jpeg" class="slide" alt="Highlight 3">
+                    <img src="../Images/Tournament/Preview/4.jpeg" class="slide" alt="Highlight 4">
+                    <img src="../Images/Tournament/Preview/5.jpg" class="slide" alt="Highlight 5">
+                </div>
+                <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <!-- Info Card (40%) -->
+            <div class="info-card">
+                <h2>🏆 Join & Create Tournaments</h2>
+                <p>Experience the thrill of competition! Whether you want to join a tournament or create one, TurfHub makes it easy.</p>
+                
+                <ul class="info-list">
+                    <li>✔ Register your team in seconds</li>
+                    <li>✔ Compete against top players</li>
+                    <li>✔ Win exciting rewards</li>
+                </ul>
+            
+                <div class="stats">
+                    <span>🌟 <strong>50+</strong> Active Tournaments</span>
+                    <span>👥 <strong>1000+</strong> Players Participating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ongoing Tournaments Section (Full Screen) 
+    <section id="ongoing">
+        <h2>Ongoing Tournaments</h2>
+        <div class="course-container">
+            <div class="course-card">
+                <img src="../Images/Tournament/isi-cricket.jpg" alt="Course Image" class="course-image">
+                <h3 class="course-title">5v5 Clash</h3>
+                <p class="instructor">Virudhunagar</p>
+                <div class="rating">Football</div>
+                <div class="price">
+                    <span class="current-price">₹500</span>
+                </div>
+                <button class="premium">5v5</button>
+                <button class="bestseller">Male</button>
+            </div>
+    
+            <div class="course-card">
+                <img src="course2.jpg" alt="Course Image" class="course-image">
+                <h3 class="course-title">The Complete AI-Powered Copywriting Course & ChatGPT...</h3>
+                <p class="instructor">Ing. Tomas Moravek, Learn Digital...</p>
+                <div class="rating">4.2 ⭐ (1,756)</div>
+                <div class="price">
+                    <span class="current-price">₹489</span>
+                    <span class="original-price">₹3,099</span>
+                </div>
+                <button class="premium">Premium</button>
+            </div>
+    
+            <div class="course-card">
+                <img src="course3.jpg" alt="Course Image" class="course-image">
+                <h3 class="course-title">ChatGPT, Midjourney, Gemini, DeepSeek: Marketing Tools</h3>
+                <p class="instructor">Anton Voroniuk, Anton Voroniuk Support...</p>
+                <div class="rating">4.4 ⭐ (490)</div>
+                <div class="price">
+                    <span class="current-price">₹579</span>
+                    <span class="original-price">₹889</span>
+                </div>
+                <button class="premium">Premium</button>
+            </div>
+    
+            <div class="course-card">
+                <img src="course4.jpg" alt="Course Image" class="course-image">
+                <h3 class="course-title">Mastering SEO With ChatGPT: Ultimate Beginner's Guide</h3>
+                <p class="instructor">Anton Voroniuk, Anton Voroniuk Support...</p>
+                <div class="rating">4.4 ⭐ (254)</div>
+                <div class="price">
+                    <span class="current-price">₹509</span>
+                    <span class="original-price">₹799</span>
+                </div>
+                <button class="premium">Premium</button>
+            </div>
+        </div>
+    
+        <button class="show-all">Show all Data Science courses</button> -->
+        <!-- <div class="slide-contain swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile1.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile2.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile3.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile4.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile5.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile6.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile7.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile8.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="images/profile9.jpg" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+                      dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div> -->
+        <!-- <ul id="tournamentList">
+            Ongoing tournaments will be added dynamically 
+        </ul>-->
+    </section>
+
+    <!-- Gallery Section (Full Screen) -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="image1.jpg" alt="Tournament Image 1">
+            <img src="image2.jpg" alt="Tournament Image 2">
+            <img src="image3.jpg" alt="Tournament Image 3">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+          <a href="index1.html#home">Home</a>
+          <a href="index1.html#tournament">Tournament</a>
+          <a href="index1.html#about">About</a>
+          <a href="index1.html#contact">Contact</a>
+        </div>
+        <div class="social-media">
+          <a href="#"><img src="../Images/logos/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="../Images/logos/instagram.svg" alt="Instagram"></a>
+          <a href="#">Twitter</a>
+        </div>
+        <p>© 2025 TurfHub. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="../script/tourn.js"></script>
+</body>
+</html>
