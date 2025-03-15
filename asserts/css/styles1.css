@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
     font-family: 'nura';
-    src:url('../Fonts/Nura\ OTF/Nura-Bold.otf') format('opentype');
+    src:url('../Fonts/Nura\ OTF/Nura-ExtraBold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }*{
@@ -13,7 +13,7 @@
 
 header {
     position: fixed;
-    top: 0px;
+    top: 10px;
     left: 0px;
     width:100%;
     padding: 15px 30px;
@@ -26,8 +26,12 @@ header {
 }
 
 header.scrolled {
-    background: rgba(34, 139, 34, 1); /* Solid green when scrolled */
-
+    
+    background: rgba(34, 139, 34, 1);  
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    width: 90%;
+    margin-left: 5%;
 }
 
 #headIcon {
@@ -38,9 +42,11 @@ header.scrolled {
 
 .logo {
     font-size: 1.8em;
+    font-weight: 500;
     font-family: 'nura', sans-serif;
     letter-spacing: 2px;
     color: white;
+    text-shadow: #333 1px 0 10px;
     user-select: none;
     display: flex;
     align-items: center;
@@ -84,6 +90,7 @@ header.scrolled {
     transform-origin: left;
     transform: scaleX(1);
 }
+
 
 .navbar .btn-login {
     width: 110px;
@@ -224,6 +231,7 @@ header.scrolled {
     font-size: 3em;
     margin-bottom: 20px;
     pointer-events: none;
+    text-shadow: #333 1px 0 10px;
   }
   
   .hero-content p {
@@ -241,7 +249,7 @@ header.scrolled {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 5px;
+    border-radius: 50px;
   }
 
   .hero .btn-book:hover {
@@ -261,7 +269,7 @@ header.scrolled {
   .tournament {
     width: 100%;
     height: 100vh;
-    background: url('../Images/wallpaperflare.com_wallpaper\ \(3\).jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Images/wallpaperflare.com_wallpaper\ \(3\).jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,8 +302,11 @@ header.scrolled {
 
 .tournament p {
     font-size: 1.3em;
+    font-weight: bold;
     margin-bottom: 30px;
     pointer-events: none;
+    color: white;
+    text-shadow: #333 1px 0 10px;
 }
 
 .btncls{
@@ -313,7 +324,7 @@ header.scrolled {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .btn-tournament:hover {
@@ -330,7 +341,7 @@ header.scrolled {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .btn-tournament-register:hover {
@@ -551,8 +562,9 @@ header.scrolled {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #4CAF50, #2E7D32);
-    color: white;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../Images/Fifa\ Backgrounds\ Free\ Download.jpeg) no-repeat center center/cover;*/
+    background: white;
+    color: black;
     text-align: center;
     padding: 50px 20px;
 }
@@ -571,6 +583,10 @@ header.scrolled {
     margin-bottom: 30px;
 }
 
+.about #p1{
+    color: #fff;
+}
+
 .about-content {
     display: flex;
     justify-content: space-between;
@@ -578,7 +594,7 @@ header.scrolled {
 }
 
 .about-card {
-    background: rgba(255, 255, 255, 0.1);
+    background:#4CAF50;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -586,6 +602,7 @@ header.scrolled {
 }
 
 .about-card h3 {
+    color: #fff;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -597,6 +614,7 @@ header.scrolled {
 
 .about-card ul li {
     font-size: 1.1em;
+    color: white;
     margin: 10px 0;
     display: flex;
     align-items: center;

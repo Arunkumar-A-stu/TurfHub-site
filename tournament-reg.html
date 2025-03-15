@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Registration</title>
+    <link rel="stylesheet" href="../css/tour-create.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">TurfHub</h2>
+        <nav class="navbar">
+            <a href="index1.html#home">Home</a>
+            <a href="index1.html#tournament">Tournaments</a>
+            <a href="index1.html#about">About</a>
+            <a href="index1.html#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="page-info">
+        <h2>Welcome to TurfHub</h2>
+        <p>Here you can create and manage your own tournaments. Follow the steps below to get started:</p>
+        <ul>
+            <li>Create a new tournament by providing the necessary details.</li>
+            <li>Conduct matches by entering the tournament ID and team details.</li>
+            <li>View tournament details by entering the tournament ID.</li>
+        </ul>
+    </section>
+    
+    <section id="create-conduct-tournament">
+        <h2>Create or Conduct Tournament</h2>
+        <div>
+            <h3>Create Tournament</h3>
+            <form id="tournament-form">
+                <label for="tournament-name">Tournament Name:</label>
+                <input type="text" id="tournament-name" name="tournament-name" required>
+                
+                <label for="tournament-date">Date:</label>
+                <input type="date" id="tournament-date" name="tournament-date" required>
+                
+                <label for="tournament-location">Location:</label>
+                <input type="text" id="tournament-location" name="tournament-location" required>
+                
+                <label for="number-of-teams">Number of Teams:</label>
+                <input type="number" id="number-of-teams" name="number-of-teams" required>
+                
+                <button type="submit">Create Tournament</button>
+            </form>
+        </div>
+        <div>
+            <h3>Conduct Tournament</h3>
+            <form id="conduct-form">
+                <label for="tournament-id">Tournament ID:</label>
+                <input type="text" id="tournament-id" name="tournament-id" required>
+                
+                <label for="team1-name">Team 1 Name:</label>
+                <input type="text" id="team1-name" name="team1-name" required>
+                
+                <label for="team2-name">Team 2 Name:</label>
+                <input type="text" id="team2-name" name="team2-name" required>
+                
+                <label for="match-date">Match Date:</label>
+                <input type="date" id="match-date" name="match-date" required>
+                
+                <button type="submit">Conduct Match</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="view-tournament">
+        <h2>View Tournament</h2>
+        <form id="view-form">
+            <label for="view-tournament-id">Tournament ID:</label>
+            <input type="text" id="view-tournament-id" name="view-tournament-id" required>
+            
+            <button type="submit">View Tournament</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+          <a href="index1.html#home">Home</a>
+          <a href="index1.html#tournament">Tournament</a>
+          <a href="index1.html#about">About</a>
+          <a href="index1.html#contact">Contact</a>
+        </div>
+        <div class="social-media">
+          <a href="#"><img src="../Images/logos/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="../Images/logos/instagram.svg" alt="Instagram"></a>
+          <a href="#">Twitter</a>
+        </div>
+        <p>© 2025 TurfHub. All rights reserved.</p>
+      </footer>
+</body>
+</html>
